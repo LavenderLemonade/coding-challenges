@@ -1,30 +1,5 @@
 const DataParsing = (actorList, movieList) => {
 
-    const allActors = [];
-    if (actorList) {
-        for (let i = 0; i < actorList.length; i++) {
-            const theActor = {
-                actorName: actorList[i].name,
-                actorID: actorList[i].actorId
-            };
-
-            allActors.push(theActor);
-        }
-    }
-
-    const allMovies = [];
-    if (movieList) {
-        for (let i = 0; i < movieList.length; i++) {
-            const theMovie = {
-                movieName: movieList[i].title,
-                movieID: movieList[i].movieId,
-                movieActors: movieList[i].actors
-            };
-
-            allMovies.push(theMovie);
-        }
-    }
-
     const finalList = [];
 
     if (actorList && movieList) {
@@ -59,7 +34,7 @@ const DataParsing = (actorList, movieList) => {
 
 
 
-    return { allActors, allMovies, finalList }
+    return { finalList }
 }
 
 export default DataParsing;
